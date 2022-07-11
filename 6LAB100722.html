@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Name : NAMRATHA</p>
+    <p>USN : 1BG19IS029</p>
+   <p id="myP1">TEXT_GROWING</p> 
+   <p id="myP2">TEXT_SHRINKING</p> 
+</body>
+<script>
+    var size=10;
+    var i=0;
+    var mywait1=setInterval(GrowText,100);
+    function GrowText()
+    {
+        if(size<51){
+            size=size+1;
+            document.getElementById("myP1").style.fontSize=(size+'pt');
+            document.getElementById("myP1").style.color="red";
+            document.getElementById("myP2").style.visibility="hidden";
+
+        }
+        else{
+            clearInterval(mywait1);
+            mywait1=setInterval(shrinkText,100);
+            document.getElementById("myP1").style.visibility="hidden";
+            document.getElementById("myP1").style.fontSize='1pt';
+            document.getElementById("myP2").style.visibility="visible";
+
+        }
+    }
+    function shrinkText(){
+        if(size>5){
+            size=size-1;
+            document.getElementById("myP2").style.fontSize=(size+'pt');
+            document.getElementById("myP2").style.color="blue";
+
+
+        }
+        else{
+            clearInterval(mywait1);
+        }
+    }
+</script>
+</html>
