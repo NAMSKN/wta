@@ -8,7 +8,7 @@
                 var h=d.gethours();
                 var m=d.getMinutes();
                 var s=d.getSeconds();
-                document.getElementById("txt");innerHTML=h+":"+m+":"+s;
+                document.getElementById("txt").innerHTML=h+":"+m+":"+s;
                 setTimeOut('startTime()',1000);    
             }
         </script>
