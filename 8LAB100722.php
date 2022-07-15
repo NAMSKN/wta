@@ -31,7 +31,7 @@
 <html>
 <body>
 <h1>
-<?php echo "The time from server is: ".date("h:m:s");?>
+<?php echo "The time from server is: ".date("h:i:sa");?>
 </h1>
 </body>
 </html>
